@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -31,7 +33,6 @@ class _MyAppState extends State<MyApp> {
     "Confirm Password"
   ];
   bool _isValidEmail = true, _issamepass = true;
-  DateTime selectedDate = DateTime.now();
   late String d;
   bool _isPasswordVisible = false, _isPasswordVisible1 = false;
 
@@ -166,7 +167,6 @@ class _MyAppState extends State<MyApp> {
                     firstDate: DateTime(2000),
                     lastDate: DateTime.now(),
                     dateLabelText: 'Date of Birth',
-                    //controller: controllers[3],
                     focusNode: _focusNodes[3],
                     onChanged: (val) => d = val,
                     validator: (val) {
